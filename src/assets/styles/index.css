@@ -1,0 +1,7 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web:wght@700;900&display=swap');
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
