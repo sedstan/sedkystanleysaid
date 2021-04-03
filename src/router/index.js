@@ -1,9 +1,9 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import Home from '@vue/views/Home'
-import Projects from '@vue/views/Projects'
-import AboutMe from '@vue/views/About'
-import Achievements from '@vue/views/Achievements'
-import BeSocial from '@vue/views/BeSocial'
+import Home from '@vue/views/Home.vue'
+import Projects from '@vue/views/Projects.vue'
+import AboutMe from '@vue/views/About.vue'
+import Achievements from '@vue/views/Achievements.vue'
+import BeSocial from '@vue/views/BeSocial.vue'
 
 const routes = [
   {
@@ -30,7 +30,8 @@ const routes = [
     path: '/#be-social',
     name: BeSocial,
     component: BeSocial
-  }
+  },
+  
 ]
 
 const router = createRouter({

@@ -1,19 +1,22 @@
 <template>
   <!-- Header -->
-  <HelloWorld />
+  <!-- <HelloWorld /> -->
   <main>
     <!-- Sections -->
   </main>
   <!-- Footer -->
+  <FooterNav />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import FooterNav from './components/FooterNav'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
+    FooterNav
   }
 }
 </script>
