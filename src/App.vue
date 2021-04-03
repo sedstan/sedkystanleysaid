@@ -1,34 +1,30 @@
 <template>
-  <!-- Header -->
-  <!-- <HelloWorld /> -->
-  <main>
-    <!-- Sections -->
-  </main>
-  <!-- Footer -->
-  <FooterNav />
+  <nav id="nav-bottom">
+    <router-link to="/">Home |</router-link>
+    <router-link to="/#projects"> Projects</router-link>
+  </nav>
+  <router-view />
 </template>
-
-<script>
-// import HelloWorld from './components/HelloWorld.vue'
-import FooterNav from './components/FooterNav'
-
-export default {
-  name: 'App',
-  components: {
-    // HelloWorld
-    FooterNav
-  }
-}
-</script>
 
 <style>
 #app {
   font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-size: 1em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: oldlace;
+  color: #2c3e50;
+}
+
+#nav-bottom {
+  padding: 30px;
+}
+
+#nav-bottom a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav-bottom a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

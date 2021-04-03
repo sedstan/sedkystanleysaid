@@ -1,41 +1,36 @@
-import { createWebHistory, createRouter } from 'vue-router'
-import Home from '@vue/views/Home.vue'
-import Projects from '@vue/views/Projects.vue'
-import AboutMe from '@vue/views/About.vue'
-import Achievements from '@vue/views/Achievements.vue'
-import BeSocial from '@vue/views/BeSocial.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
 
 const routes = [
   {
     path: '/',
-    name: Home,
+    name: 'Home',
     component: Home
   },
   {
     path: '/#projects',
-    name: Projects,
-    component: Projects
+    name: 'Projects',
+    component: () => import('../views/Projects.vue')
   },
   {
     path: '/#about-me',
-    name: AboutMe,
-    component: AboutMe
+    name: 'AboutMe',
+    component: () => import('../views/AboutMe.vue')
   },
   {
     path: '/#achievements',
-    name: Achievements,
-    component: Achievements
+    name: 'Achievements',
+    component: () => import('../views/Achievements.vue')
   },
   {
     path: '/#be-social',
-    name: BeSocial,
-    component: BeSocial
-  },
-  
+    name: 'BeSocial',
+    component: () => import('../views/BeSocial.vue')
+  }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
