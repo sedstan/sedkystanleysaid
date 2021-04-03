@@ -1,10 +1,10 @@
 <template>
-    <!-- Header -->
-    <HelloWorld />
-    <main>
-      <!-- Sections -->
-    </main>
-    <!-- Footer -->
+  <!-- Header -->
+  <HelloWorld />
+  <main>
+    <!-- Sections -->
+  </main>
+  <!-- Footer -->
 </template>
 
 <script>
