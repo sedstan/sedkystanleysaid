@@ -1,20 +1,25 @@
 <template>
-  <footer class="bg-bistro text-cultured">
-    <div>
+  <footer class="text-cultured">
+    <div class="bg-barnRed">
       <!-- TODO: MobileNav -->
+      <MobileNav />
     </div>
-    <div>
+    <div class="bg-bistro">
       <p>&copy; Sedky Stanley Said {{ year }} - All Rights Reserved.</p>
     </div>
   </footer>
 </template>
 
 <script>
+import MobileNav from '@/components/MobileNav'
+
 const today = new Date()
 const year = today.getFullYear()
 
 export default {
   name: 'Footer',
+  components: { MobileNav },
+
   data: function () {
     return {
       year: year

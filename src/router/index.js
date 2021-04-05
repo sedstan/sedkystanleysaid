@@ -16,7 +16,7 @@ const router = createRouter({
     if (to.hash) {
       return {
         selector: to.hash,
-        bahavior: 'smooter'
+        bahavior: 'smoother'
       }
     }
   }

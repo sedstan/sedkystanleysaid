@@ -1,15 +1,12 @@
 <template>
-  <!-- TODO: Add navbar with emojis -->
-  <nav class="flex justify-center lg:hidden">
-    <router-link v-for="link in links" :key="link.id" :to="`${link.page}`" class="flex-auto">{{
-      link.name
-    }}</router-link>
+  <nav class="sm:hidden">
+    <router-link v-for="link in links" :key="link.id" :to="`${link.page}`">{{ link.name }}</router-link>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'MobileNav',
+  name: 'DesktopNav',
   data() {
     return {
       links: [

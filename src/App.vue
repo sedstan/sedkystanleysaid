@@ -1,5 +1,6 @@
 <template>
   <!-- Header -->
+  <Header />
   <!-- Main -->
   <main>
     <Home />
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+import Header from '@/components/Header'
 import Home from '@/views/Home.vue'
 import Projects from '@/views/Projects.vue'
 import AboutMe from '@/views/AboutMe.vue'
@@ -22,6 +24,7 @@ import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
+    Header,
     Home,
     Projects,
     AboutMe,
