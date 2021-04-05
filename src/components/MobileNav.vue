@@ -1,13 +1,28 @@
 <template>
-  <!-- TODO: Add navbar with emojis -->
-  <div></div>
-  <nav class="flex justify-center lg:hidden">
-    <ul>
-      <li v-for="link in links" :key="link.id" class="flex-auto">
-        <router-link :to="`${link.page}`">{{ link.name }}</router-link>
-      </li>
-    </ul>
-  </nav>
+  <div class="lg:hidden bg-barnRed text-oldLace fixed w-full h-14 flex flex-row justify-center items-center">
+    <button id="mobile-menu-btn" class="flex-1">More</button>
+    <nav class="flex-auto">
+      <ul class="flex flex-row justify-evenly">
+        <li v-for="link in links" :key="link.id">
+          <router-link v-if="link.id === 0" :to="`${link.page}`" class="flex-auto"
+            >&#x1F3E0; {{ link.name }}</router-link
+          >
+        </li>
+        <li v-for="link in links" :key="link.id">
+          <router-link v-if="link.id === 1" :to="`${link.page}`" class="flex-auto"
+            >&#x1F4BB;{{ link.name }}</router-link
+          >
+        </li>
+      </ul>
+    </nav>
+    <nav class="hidden">
+      <ul>
+        <li v-for="link in links" :key="link.id" class="flex-auto">
+          <router-link :to="`${link.page}`">{{ link.name }}</router-link>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>

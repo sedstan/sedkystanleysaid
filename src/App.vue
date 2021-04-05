@@ -11,6 +11,8 @@
   </main>
   <!-- Footer -->
   <Footer />
+  <!-- Bottom Navigation -->
+  <MobileNav />
 </template>
 
 <script>
@@ -21,6 +23,7 @@ import AboutMe from '@/views/AboutMe.vue'
 import Achievements from '@/views/Achievements.vue'
 import BeSocial from '@/views/BeSocial.vue'
 import Footer from '@/components/Footer.vue'
+import MobileNav from '@/components/MobileNav.vue'
 
 export default {
   components: {
@@ -30,7 +33,8 @@ export default {
     AboutMe,
     Achievements,
     BeSocial,
-    Footer
+    Footer,
+    MobileNav
   }
 }
 </script>
