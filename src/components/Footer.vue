@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-cultured">
+  <footer class="text-oldLace">
     <div class="bg-barnRed">
       <!-- TODO: MobileNav -->
       <MobileNav />

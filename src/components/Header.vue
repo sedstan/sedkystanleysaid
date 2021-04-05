@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="bg-barnRed text-oldLace">
     <DesktopNav />
   </header>
 </template>
