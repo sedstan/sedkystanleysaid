@@ -1,7 +1,6 @@
 <template>
   <footer class="text-oldLace">
     <div class="bg-barnRed">
-      <!-- TODO: MobileNav -->
       <MobileNav />
     </div>
     <div class="bg-bistro">

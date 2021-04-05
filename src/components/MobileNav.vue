@@ -1,9 +1,12 @@
 <template>
   <!-- TODO: Add navbar with emojis -->
+  <div></div>
   <nav class="flex justify-center lg:hidden">
-    <router-link v-for="link in links" :key="link.id" :to="`${link.page}`" class="flex-auto">{{
-      link.name
-    }}</router-link>
+    <ul>
+      <li v-for="link in links" :key="link.id" class="flex-auto">
+        <router-link :to="`${link.page}`">{{ link.name }}</router-link>
+      </li>
+    </ul>
   </nav>
 </template>
 
