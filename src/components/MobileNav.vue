@@ -1,12 +1,12 @@
 <template>
-  <nav id="full-menu" class="hidden w-full h-full bg-barnRed text-oldLace">
-    <ul>
-      <li v-for="link in links" :key="link.id" class="flex-auto">
-        <router-link :to="`${link.page}`">{{ link.name }}</router-link>
-      </li>
-    </ul>
-  </nav>
   <div class="lg:hidden bg-barnRed text-oldLace fixed w-full h-14 flex flex-row justify-center items-center">
+    <nav id="full-menu" class="hidden w-full bg-barnRed text-oldLace absolute bottom-14">
+      <ul>
+        <li v-for="link in links" :key="link.id" class="flex-auto">
+          <router-link :to="`${link.page}`">{{ link.name }}</router-link>
+        </li>
+      </ul>
+    </nav>
     <div id="menu-btn" class="inline-block cursor-pointer flex-auto w-1/3" @click="open">
       <div class="menu-btn--top w-5 h-1 bg-oldLace my-1 mx-0"></div>
       <div class="menu-btn--middle w-5 h-1 bg-oldLace my-1 mx-0"></div>
