@@ -1,19 +1,18 @@
 <template>
+  <nav id="full-menu" class="hidden w-full h-full bg-barnRed text-oldLace">
+    <ul>
+      <li v-for="link in links" :key="link.id" class="flex-auto">
+        <router-link :to="`${link.page}`">{{ link.name }}</router-link>
+      </li>
+    </ul>
+  </nav>
   <div class="lg:hidden bg-barnRed text-oldLace fixed w-full h-14 flex flex-row justify-center items-center">
-    <div
-      class="group inline-block cursor-pointer"
-      @click="open"
-      @class="
-        {
-          active: isActive
-        }
-      "
-    >
-      <div class="menu-btn--top w-5 h-1 bg-oldLace my-1 mx-0 transition duration-75"></div>
-      <div class="menu-btn--middle w-5 h-1 bg-oldLace my-1 mx-0 transition duration-75"></div>
-      <div class="menu-btn--bottom w-5 h-1 bg-oldLace my-1 mx-0 transition duration-75"></div>
+    <div id="menu-btn" class="inline-block cursor-pointer flex-auto w-1/3" @click="open">
+      <div class="menu-btn--top w-5 h-1 bg-oldLace my-1 mx-0"></div>
+      <div class="menu-btn--middle w-5 h-1 bg-oldLace my-1 mx-0"></div>
+      <div class="menu-btn--bottom w-5 h-1 bg-oldLace my-1 mx-0"></div>
     </div>
-    <nav class="flex-auto">
+    <nav class="flex-auto w-2/3">
       <ul class="flex flex-row justify-evenly">
         <li v-for="link in links" :key="link.id">
           <router-link v-if="link.id === 0" :to="`${link.page}`" class="flex-auto"
@@ -27,13 +26,6 @@
         </li>
       </ul>
     </nav>
-    <nav id="full-menu" class="hidden">
-      <ul>
-        <li v-for="link in links" :key="link.id" class="flex-auto">
-          <router-link :to="`${link.page}`">{{ link.name }}</router-link>
-        </li>
-      </ul>
-    </nav>
   </div>
 </template>
 
@@ -41,9 +33,14 @@
 export default {
   name: 'MobileNav',
   methods: {
-    open: function () {
-      this.isActive = !this.isActive
-      console.log('active')
+    open() {
+      const btn = document.querySelector('#menu-btn')
+      const menu = document.querySelector('#full-menu')
+
+      btn.classList.toggle('active')
+      menu.classList.toggle('hidden')
+
+      console.log(btn)
     }
   },
   data() {
@@ -74,23 +71,10 @@ export default {
           name: 'Be Social',
           page: '/#be-social'
         }
-      ],
-      isActive: false
+      ]
     }
   }
 }
 </script>
 
-<style>
-.active .menu-btn--top {
-  transform: rotate(45deg);
-}
-
-.active .menu-btn--middle {
-  opacity: 0;
-}
-
-.active .menu-btn--bottom {
-  transform: rotate(-45deg);
-}
-</style>
+<style></style>
