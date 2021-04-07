@@ -1,6 +1,6 @@
 <template>
   <div class="lg:hidden bg-barnRed text-oldLace fixed w-full h-14 flex flex-row justify-center items-center">
-    <nav id="full-menu" class="hidden w-full bg-barnRed text-oldLace absolute bottom-14">
+    <nav id="full-menu" class="hidden w-full bg-barnRed text-oldLace absolute bottom-14 p-4">
       <ul>
         <li v-for="link in links" :key="link.id" class="flex-auto">
           <router-link :to="`${link.page}`">{{ link.name }}</router-link>
