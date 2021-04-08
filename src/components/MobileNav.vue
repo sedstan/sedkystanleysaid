@@ -3,13 +3,13 @@
     <nav id="full-menu" class="hidden w-full bg-barnRed text-oldLace absolute bottom-14 p-4">
       <ul>
         <li v-for="link in links" :key="link.id" class="flex-auto">
-          <router-link v-if="link.id === 2" :to="`${link.page}`">{{ link.name }}</router-link>
+          <router-link v-if="link.id === 2" :to="`${link.page}`" v-on:click="open">{{ link.name }}</router-link>
         </li>
         <li v-for="link in links" :key="link.id" class="flex-auto">
-          <router-link v-if="link.id === 3" :to="`${link.page}`">{{ link.name }}</router-link>
+          <router-link v-if="link.id === 3" :to="`${link.page}`" v-on:click="open">{{ link.name }}</router-link>
         </li>
         <li v-for="link in links" :key="link.id" class="flex-auto">
-          <router-link v-if="link.id === 4" :to="`${link.page}`">{{ link.name }}</router-link>
+          <router-link v-if="link.id === 4" :to="`${link.page}`" v-on:click="open">{{ link.name }}</router-link>
         </li>
       </ul>
     </nav>
