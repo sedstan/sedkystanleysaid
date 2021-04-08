@@ -16,13 +16,13 @@
     <nav class="flex-auto w-2/3">
       <ul class="flex flex-row justify-evenly">
         <li v-for="link in links" :key="link.id">
-          <router-link v-if="link.id === 0" :to="`${link.page}`" class="flex-auto"
-            >&#x1F3E0; {{ link.name }}</router-link
+          <router-link class="flex-auto" v-if="link.id === 0" :to="`${link.page}`"
+            ><span class="text-xl text-center">&#x1F3E0;</span><br />{{ link.name }}</router-link
           >
         </li>
         <li v-for="link in links" :key="link.id">
-          <router-link v-if="link.id === 1" :to="`${link.page}`" class="flex-auto"
-            >&#x1F4BB;{{ link.name }}</router-link
+          <router-link class="flex-auto" v-if="link.id === 1" :to="`${link.page}`"
+            ><span class="text-xl text-center">&#x1F4BB;</span><br />{{ link.name }}</router-link
           >
         </li>
       </ul>
