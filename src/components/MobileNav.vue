@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:hidden bg-barnRed text-oldLace fixed w-full h-14 flex flex-row justify-center items-center">
+  <div class="lg:hidden bg-barnRed text-oldLace font-black fixed w-full h-14 flex flex-row justify-center items-center">
     <nav id="full-menu" class="hidden w-full bg-barnRed text-oldLace absolute bottom-14 p-4">
       <ul>
         <li v-for="link in links" :key="link.id" class="flex-auto">
@@ -27,7 +27,11 @@
         </li>
       </ul>
     </nav>
-    <button id="menu-btn" class="inline-block cursor-pointer flex-auto w-1/3 text-lg" @click="open">
+    <button
+      id="menu-btn"
+      class="inline-block cursor-pointer flex-auto text-base focus:outline-none focus:ring-0"
+      @click="open"
+    >
       &#x2022; &#x2022; &#x2022;
     </button>
   </div>
