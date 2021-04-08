@@ -3,15 +3,16 @@
     <nav id="full-menu" class="hidden w-full bg-barnRed text-oldLace absolute bottom-14 p-4">
       <ul>
         <li v-for="link in links" :key="link.id" class="flex-auto">
-          <router-link :to="`${link.page}`">{{ link.name }}</router-link>
+          <router-link v-if="link.id === 2" :to="`${link.page}`">{{ link.name }}</router-link>
+        </li>
+        <li v-for="link in links" :key="link.id" class="flex-auto">
+          <router-link v-if="link.id === 3" :to="`${link.page}`">{{ link.name }}</router-link>
+        </li>
+        <li v-for="link in links" :key="link.id" class="flex-auto">
+          <router-link v-if="link.id === 4" :to="`${link.page}`">{{ link.name }}</router-link>
         </li>
       </ul>
     </nav>
-    <div id="menu-btn" class="inline-block cursor-pointer flex-auto w-1/3" @click="open">
-      <div class="menu-btn--top w-5 h-1 bg-oldLace my-1 mx-0"></div>
-      <div class="menu-btn--middle w-5 h-1 bg-oldLace my-1 mx-0"></div>
-      <div class="menu-btn--bottom w-5 h-1 bg-oldLace my-1 mx-0"></div>
-    </div>
     <nav class="flex-auto w-2/3">
       <ul class="flex flex-row justify-evenly">
         <li v-for="link in links" :key="link.id">
@@ -26,6 +27,7 @@
         </li>
       </ul>
     </nav>
+    <div id="menu-btn" class="inline-block cursor-pointer flex-auto w-1/3" @click="open">...</div>
   </div>
 </template>
 
@@ -39,8 +41,6 @@ export default {
 
       btn.classList.toggle('active')
       menu.classList.toggle('hidden')
-
-      console.log(btn)
     }
   },
   data() {
