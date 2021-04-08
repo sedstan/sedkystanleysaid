@@ -27,7 +27,9 @@
         </li>
       </ul>
     </nav>
-    <div id="menu-btn" class="inline-block cursor-pointer flex-auto w-1/3" @click="open">...</div>
+    <button id="menu-btn" class="inline-block cursor-pointer flex-auto w-1/3 text-lg" @click="open">
+      &#x2022; &#x2022; &#x2022;
+    </button>
   </div>
 </template>
 
