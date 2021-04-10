@@ -4,12 +4,12 @@
   >
     <nav
       id="full-menu"
-      class="hidden w-full bg-barnRed text-oldLace font-titillium font-black text-2xl absolute bottom-14 p-4 border-b border-oldLace"
+      class="hidden w-full bg-barnRed text-oldLace font-titillium font-black text-3xl absolute bottom-14 py-4 border-b border-oldLace"
     >
-      <ul class="w-full">
-        <li class="border-b-2 border-oldLace" v-for="link in moreMenu" :key="link.id">
+      <ul class="w-2/4 float-right">
+        <li class="border-b-2 border-oldLace text-left mb-12" v-for="link in moreMenu" :key="link.id">
           <router-link :to="`${link.page}`" v-on:click="open"
-            >{{ link.emoji }} <span class="">{{ link.name }}</span></router-link
+            ><span class="pr-4">{{ link.emoji }}</span> <span class="pl-4">{{ link.name }}</span></router-link
           >
         </li>
       </ul>
@@ -18,7 +18,7 @@
       <ul class="flex flex-row justify-between">
         <li class="w-full" v-for="link in navbarLinks" :key="link.id">
           <router-link class="flex-auto w-full" :to="`${link.page}`"
-            ><span class="text-2xl">{{ link.emoji }}</span
+            ><span class="text-lg">{{ link.emoji }}</span
             ><br /><span class="text-xs font-black">{{ link.name }}</span></router-link
           >
         </li>
