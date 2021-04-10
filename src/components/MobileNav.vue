@@ -5,33 +5,22 @@
       class="hidden w-full bg-barnRed text-oldLace font-titillium font-black text-2xl absolute bottom-14 p-4 border-b border-oldLace"
     >
       <ul class="flex flex-col w-full">
-        <li v-for="link in links" :key="link.id" class="flex-auto border-b border-oldLace">
-          <router-link v-if="link.id === 2" :to="`${link.page}`" v-on:click="open"
-            ><span class="mr-14">&#x1F468;</span>{{ link.name }}</router-link
-          >
-        </li>
-        <li v-for="link in links" :key="link.id" class="flex-auto">
-          <router-link v-if="link.id === 3" :to="`${link.page}`" v-on:click="open"
-            ><span class="mr-14">&#x1F3C6;</span>{{ link.name }}</router-link
-          >
-        </li>
-        <li v-for="link in links" :key="link.id" class="flex-auto">
-          <router-link v-if="link.id === 4" :to="`${link.page}`" v-on:click="open"
-            ><span class="mr-14">&#x1F44B;</span>{{ link.name }}</router-link
+        <li class="nav__item--bottom-border flex-auto" v-for="link in links" :key="link.id">
+          <router-link
+            class="border-b border-oldLace"
+            v-if="link.id === 2 || link.id === 3 || link.id === 4"
+            :to="`${link.page}`"
+            v-on:click="open"
+            >{{ link.emoji }}{{ link.name }}</router-link
           >
         </li>
       </ul>
     </nav>
     <nav class="flex-auto w-2/3">
-      <ul class="flex flex-row justify-evenly">
+      <ul class="flex flex-row justify-around">
         <li v-for="link in links" :key="link.id">
-          <router-link class="flex-auto" v-if="link.id === 0" :to="`${link.page}`"
-            ><span class="text-xl text-center">&#x1F3E0;</span><br />{{ link.name }}</router-link
-          >
-        </li>
-        <li v-for="link in links" :key="link.id">
-          <router-link class="flex-auto" v-if="link.id === 1" :to="`${link.page}`"
-            ><span class="text-xl text-center">&#x1F4BB;</span><br />{{ link.name }}</router-link
+          <router-link class="flex-auto" v-if="link.id === 0 || link.id === 1" :to="`${link.page}`"
+            >{{ link.emoji }}{{ link.name }}</router-link
           >
         </li>
       </ul>
@@ -61,28 +50,34 @@ export default {
   data() {
     return {
       links: [
+        // TODO: Figure out how to add emoji unicode to the objects
         {
           id: 0,
+          emoji: '',
           name: 'Home',
           page: '/'
         },
         {
           id: 1,
+          emoji: '',
           name: 'Projects',
           page: '/#projects'
         },
         {
           id: 2,
+          emoji: '',
           name: 'About Me',
           page: '/#about-me'
         },
         {
           id: 3,
+          emoji: '',
           name: 'Achievements',
           page: '/#achievements'
         },
         {
           id: 4,
+          emoji: '',
           name: 'Be Social',
           page: '/#be-social'
         }
@@ -92,4 +87,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.nav__item--bottom-border {
+  border-bottom: 1px solid oldLace;
+}
+</style>
