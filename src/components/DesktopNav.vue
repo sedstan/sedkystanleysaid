@@ -1,5 +1,5 @@
 <template>
-  <nav class="hidden lg:flex lg:justify-center">
+  <nav class="hidden lg:container lg:flex lg:justify-center">
     <ul>
       <li v-for="link in links" :key="link.id" class="flex-auto">
         <router-link :to="`${link.page}`">{{ link.name }}</router-link>
