@@ -1,6 +1,6 @@
 <template>
   <header class="bg-barnRed text-oldLace">
-    <!-- TODO: Create a div with a logo. Make sure that the logo is source from AWS -->
+    <!-- TODO: Create a div with a logo. Make sure that the logo is source from AWS. Don't forget <router-link></router-link> -->
     <DesktopNav />
   </header>
 </template>
