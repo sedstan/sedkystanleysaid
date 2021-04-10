@@ -14,7 +14,7 @@
         </li>
       </ul>
     </nav>
-    <nav class="flex-auto">
+    <nav class="w-2/3 flex-auto">
       <ul class="flex flex-row justify-between">
         <li class="w-full" v-for="link in navbarLinks" :key="link.id">
           <router-link class="flex-auto w-full" :to="`${link.page}`"
@@ -24,7 +24,11 @@
         </li>
       </ul>
     </nav>
-    <button id="menu-btn" class="flex-auto cursor-pointer text-base focus:outline-none focus:ring-0" @click="open">
+    <button
+      id="menu-btn"
+      class="w-1/3 flex-auto cursor-pointer text-base focus:outline-none focus:ring-0"
+      @click="open"
+    >
       &#x2022; &#x2022; &#x2022;
     </button>
   </div>
