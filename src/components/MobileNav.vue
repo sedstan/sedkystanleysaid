@@ -6,10 +6,10 @@
       id="full-menu"
       class="hidden w-full bg-barnRed text-oldLace font-titillium font-black text-2xl absolute bottom-14 p-4 border-b border-oldLace"
     >
-      <ul class="flex flex-col w-full">
-        <li class="nav__item--bottom-border flex-auto" v-for="link in moreMenu" :key="link.id">
-          <router-link class="border-b border-oldLace" :to="`${link.page}`" v-on:click="open"
-            >{{ link.emoji }}{{ link.name }}</router-link
+      <ul class="w-full">
+        <li class="border-b-2 border-oldLace" v-for="link in moreMenu" :key="link.id">
+          <router-link :to="`${link.page}`" v-on:click="open"
+            >{{ link.emoji }} <span class="">{{ link.name }}</span></router-link
           >
         </li>
       </ul>
@@ -107,8 +107,4 @@ export default {
 }
 </script>
 
-<style>
-.nav__item--bottom-border {
-  border-bottom: 1px solid oldLace;
-}
-</style>
+<style></style>
