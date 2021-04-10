@@ -1,8 +1,6 @@
 <template>
-  <footer class="text-oldLace">
-    <div class="bg-bistro">
-      <p>&copy; Sedky Stanley Said {{ year }} - All Rights Reserved.</p>
-    </div>
+  <footer class="font-roboto font-black text-oldLace w-full h-17 bg-bistro flex items-center justify-center">
+    <p class="p-3">&copy; Sedky Stanley Said {{ year }} - All Rights Reserved.</p>
   </footer>
 </template>
 
