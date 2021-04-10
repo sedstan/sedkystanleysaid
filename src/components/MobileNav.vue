@@ -18,9 +18,10 @@
     </nav>
     <nav class="flex-auto w-2/3">
       <ul class="flex flex-row justify-around">
-        <li v-for="link in links" :key="link.id">
-          <router-link class="flex-auto" v-if="link.id === 0 || link.id === 1" :to="`${link.page}`"
-            >{{ link.emoji }}{{ link.name }}</router-link
+        <li class="w-full" v-for="link in links" :key="link.id">
+          <router-link class="flex-auto w-full" v-if="link.id === 0 || link.id === 1" :to="`${link.page}`"
+            ><span class="text-2xl">{{ link.emoji }}</span
+            ><br /><span class="text-xs">{{ link.name }}</span></router-link
           >
         </li>
       </ul>
@@ -50,34 +51,33 @@ export default {
   data() {
     return {
       links: [
-        // TODO: Figure out how to add emoji unicode to the objects
         {
           id: 0,
-          emoji: '',
+          emoji: '\ud83c\udfe0',
           name: 'Home',
           page: '/'
         },
         {
           id: 1,
-          emoji: '',
+          emoji: '\ud83d\udcbc',
           name: 'Projects',
           page: '/#projects'
         },
         {
           id: 2,
-          emoji: '',
+          emoji: '\ud83d\udc68',
           name: 'About Me',
           page: '/#about-me'
         },
         {
           id: 3,
-          emoji: '',
+          emoji: '\ud83c\udfc6',
           name: 'Achievements',
           page: '/#achievements'
         },
         {
           id: 4,
-          emoji: '',
+          emoji: '\ud83d\ude4b',
           name: 'Be Social',
           page: '/#be-social'
         }
