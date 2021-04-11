@@ -5,11 +5,11 @@
       <img src="https://via.placeholder.com/96" />
     </div>
     <nav class="lg:w-8/12">
-      <ul class="lg:flex lg:justify-between lg:flex-auto">
-        <li v-for="link in notHomeLinks" :key="link.id" class="">
-          <router-link :to="`${link.page}`"
-            ><span class="text-lg">{{ link.emoji }}</span
-            ><span class="text-xs font-black">{{ link.name }}</span></router-link
+      <ul class="lg:flex lg:justify-between lg:align-items:center">
+        <li v-for="link in notHomeLinks" :key="link.id">
+          <router-link class="font-titillium font-black" :to="`${link.page}`"
+            ><span class="text-3xl">{{ link.emoji }}</span
+            ><br /><span class="text-lg font-black">{{ link.name }}</span></router-link
           >
         </li>
       </ul>
