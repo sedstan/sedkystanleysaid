@@ -5,7 +5,7 @@
       <img src="https://via.placeholder.com/96" />
     </div>
     <nav class="lg:w-8/12">
-      <ul class="">
+      <ul class="lg:flex lg:justify-between lg:flex-auto">
         <li v-for="link in notHomeLinks" :key="link.id" class="">
           <router-link :to="`${link.page}`"
             ><span class="text-lg">{{ link.emoji }}</span
