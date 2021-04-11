@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-barnRed text-oldLace">
+  <header class="bg-barnRed text-oldLace hidden lg:flex">
     <!-- TODO: Create a div with a logo. Make sure that the logo is source from AWS. Don't forget <router-link></router-link> -->
     <DesktopNav />
   </header>

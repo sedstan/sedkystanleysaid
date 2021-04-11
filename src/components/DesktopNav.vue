@@ -1,14 +1,20 @@
 <template>
-  <nav class="hidden lg:container lg:flex lg:justify-end lg:w-10/12">
-    <ul class="lg:flex-row">
-      <li v-for="link in notHomeLinks" :key="link.id" class="flex-auto">
-        <router-link :to="`${link.page}`"
-          ><span class="text-lg">{{ link.emoji }}</span
-          ><span class="text-xs font-black">{{ link.name }}</span></router-link
-        >
-      </li>
-    </ul>
-  </nav>
+  <div class="lg:container lg:flex">
+    <div class="lg:w-4/12">
+      <!-- TODO: LOGO HERE  -->
+      <img src="https://via.placeholder.com/96" />
+    </div>
+    <nav class="lg:w-8/12">
+      <ul class="">
+        <li v-for="link in notHomeLinks" :key="link.id" class="">
+          <router-link :to="`${link.page}`"
+            ><span class="text-lg">{{ link.emoji }}</span
+            ><span class="text-xs font-black">{{ link.name }}</span></router-link
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>
