@@ -1,20 +1,14 @@
 <template>
-  <div class="lg:container lg:flex">
-    <div class="lg:w-4/12">
-      <!-- TODO: LOGO HERE  -->
-      <img src="https://via.placeholder.com/96" />
-    </div>
-    <nav class="lg:w-8/12">
-      <ul class="lg:flex lg:justify-between lg:align-items:center">
-        <li v-for="link in notHomeLinks" :key="link.id">
-          <router-link class="font-titillium font-black" :to="`${link.page}`"
-            ><span class="text-3xl">{{ link.emoji }}</span
-            ><br /><span class="text-lg font-black">{{ link.name }}</span></router-link
-          >
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="lg:w-10/12 lg:flex lg:justify-center lg:flex-col">
+    <ul class="lg:flex lg:flex-row lg:justify-end">
+      <li class="leading-loose mr-16 flex-shrink" v-for="link in notHomeLinks" :key="link.id">
+        <router-link class="font-titillium font-black" :to="`${link.page}`"
+          ><span class="text-3xl">{{ link.emoji }}</span
+          ><br /><span class="text-lg">{{ link.name }}</span></router-link
+        >
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
