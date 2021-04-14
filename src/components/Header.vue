@@ -1,9 +1,11 @@
 <template>
-  <header class="bg-transparent text-oldLace hidden lg:container lg:flex w-full h-24">
-    <!-- TODO: Create a div with a logo. Make sure that the logo is source from AWS. Don't forget <router-link></router-link> -->
+  <header class="bg-transparent text-oldLace hidden lg:container lg:flex w-full h-24 mt-12">
     <div class="lg:w-2/12 lg:justify-start">
-      <!-- TODO: LOGO HERE  -->
-      <img src="https://via.placeholder.com/96" alt="A gray placeholder image with the dimension written on it." />
+      <img
+        class="header__logo"
+        src="https://sed-stan-personal-site.s3.amazonaws.com/images/s3-logo-large@2x.png"
+        alt="A logo with an S and a 3."
+      />
     </div>
     <DesktopNav />
   </header>
@@ -18,4 +20,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.header__logo {
+  max-width: 96px;
+  height: auto;
+}
+</style>
