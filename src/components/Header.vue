@@ -1,5 +1,8 @@
 <template>
-  <header class="bg-transparent text-oldLace hidden lg:container lg:flex w-full h-24 mt-12">
+  <header
+    class="header header--hiden bg-transparent text-oldLace hidden lg:container lg:flex lg:w-full lg:h-24 lg:fixed lg:shadow-sm lg:mt-12"
+    :class="{ 'header--hidden': !showHeader }"
+  >
     <div class="lg:w-2/12 lg:justify-start">
       <img
         class="header__logo"
@@ -16,11 +19,48 @@ import DesktopNav from '@/components/DesktopNav'
 
 export default {
   name: 'Header',
-  components: { DesktopNav }
+  components: { DesktopNav },
+  data() {
+    return {
+      showHeader: true,
+      lastScrollPos: 0
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll() {
+      const currScrollPos = window.pageYOffset || document.documentElement.scrollTop
+      console.log(currScrollPos)
+
+      if (currScrollPos < 0) {
+        return
+      }
+
+      // if (Math.abs(currScrollPos - this.lastScrollPos) < 60) {
+      //   return
+      // }
+
+      this.showHeader = currScrollPos < this.lastScrollPos
+
+      this.lastScrollPos = currScrollPos
+    }
+  }
 }
 </script>
 
 <style>
+.header {
+  transform: translate3d(0, 0, 0);
+  transition: 0.5s all ease-out;
+}
+.header--hidden {
+  transform: translate3d(0, -100%, 0);
+}
 .header__logo {
   max-width: 96px;
   height: auto;

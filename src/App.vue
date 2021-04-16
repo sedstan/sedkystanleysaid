@@ -41,6 +41,7 @@ export default {
 
 <style>
 #app {
+  height: 500vh;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
