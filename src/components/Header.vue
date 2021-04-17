@@ -1,11 +1,11 @@
 <template>
   <header
-    class="header header--hiden bg-transparent text-oldLace hidden lg:container lg:flex lg:w-full lg:h-24 lg:fixed lg:shadow-sm lg:mt-12"
+    class="header header--hiden bg-transparent text-oldLace hidden lg:flex lg:w-full lg:fixed lg:shadow-sm"
     :class="{ 'header--hidden': !showHeader }"
   >
     <div class="lg:w-2/12 lg:justify-start">
       <img
-        class="header__logo"
+        class="header__logo p-3 ml-16"
         src="https://sed-stan-personal-site.s3.amazonaws.com/images/s3-logo-large@2x.png"
         alt="A logo with an S and a 3."
       />
@@ -41,12 +41,11 @@ export default {
         return
       }
 
-      // if (Math.abs(currScrollPos - this.lastScrollPos) < 60) {
-      //   return
-      // }
+      if (Math.abs(currScrollPos - this.lastScrollPos) < 112) {
+        return
+      }
 
       this.showHeader = currScrollPos < this.lastScrollPos
-
       this.lastScrollPos = currScrollPos
     }
   }
