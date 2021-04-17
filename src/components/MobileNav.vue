@@ -1,6 +1,6 @@
 <template>
   <div
-    class="lg:hidden bg-barnRed text-oldLace font-black fixed w-full h-14 flex flex-row justify-center items-center align-center"
+    class="lg:hidden bg-barnRed text-oldLace font-black sticky bottom-0 w-full h-14 flex flex-row justify-center items-center align-center"
   >
     <nav
       id="full-menu"

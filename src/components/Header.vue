@@ -1,6 +1,6 @@
 <template>
   <header
-    class="header header--hiden bg-transparent text-oldLace hidden lg:flex lg:w-full lg:fixed lg:shadow-sm"
+    class="header header--hiden bg-transparent text-oldLace hidden lg:flex lg:w-full lg:fixed lg:shadow-sm z-10"
     :class="{ 'header--hidden': !showHeader }"
   >
     <div class="lg:w-2/12 lg:justify-start">
@@ -35,7 +35,6 @@ export default {
   methods: {
     onScroll() {
       const currScrollPos = window.pageYOffset || document.documentElement.scrollTop
-      console.log(currScrollPos)
 
       if (currScrollPos < 0) {
         return
