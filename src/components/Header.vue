@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header {
   transform: translate3d(0, 0, 0);
   transition: 0.5s all ease-out;
