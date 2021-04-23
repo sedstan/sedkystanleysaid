@@ -2,7 +2,7 @@
   <nav class="lg:w-10/12 lg:flex lg:justify-end lg:items-center">
     <ul class="lg:flex lg:flex-row lg:justify-end">
       <li class="leading-loose lg:mr-16 flex-shrink" v-for="link in notHomeLinks" :key="link.id">
-        <router-link class="font-titillium font-black" :to="`${link.page}`"
+        <router-link class="font-titillium font-black hover:text-barnRed" :to="`${link.page}`"
           ><span class="text-3xl">{{ link.emoji }}</span
           ><br /><span class="text-lg">{{ link.name }}</span></router-link
         >
