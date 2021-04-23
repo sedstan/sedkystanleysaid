@@ -3,7 +3,7 @@
     <img src="https://sed-stan-personal-site.s3.amazonaws.com/images/laptop-stickers-1920.png" />
     <div class="container absolute font-titillium text-oldLace pb-12">
       <img
-        class="border border-barnRed rounded-full w-36 h-36 mx-auto mb-9"
+        class="border border-oldLace bg-barnRed rounded-full w-24 md:w-36 lg:w-40 h-auto mx-auto mb-9 mt-10 md:mt-0"
         src="https://sed-stan-personal-site.s3.amazonaws.com/images/head-shot-transparent.png"
       />
       <h1 class="font-black text-3xl md:text-6xl lg:text-7xl mb-3">{{ name }}</h1>
