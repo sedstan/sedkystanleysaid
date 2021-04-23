@@ -1,9 +1,9 @@
 <template>
-  <div class="flex justify-center align-center flex-row">
-    <img class="relative" src="https://sed-stan-personal-site.s3.amazonaws.com/images/laptop-stickers-1920.png" />
-    <div class="container font-titillium absolute">
-      <h1 class="font-black">{{ name }}</h1>
-      <h2 class="font-bold">{{ title }}</h2>
+  <div class="flex justify-center align-center flex-col items-center">
+    <img class="" src="https://sed-stan-personal-site.s3.amazonaws.com/images/laptop-stickers-1920.png" />
+    <div class="container absolute font-titillium text-oldLace">
+      <h1 class="font-black text-3xl md:text-6xl lg:text-7xl">{{ name }}</h1>
+      <h2 class="font-bold text-2xl md:text-4xl lg:text-6">{{ title }}</h2>
     </div>
   </div>
 </template>
