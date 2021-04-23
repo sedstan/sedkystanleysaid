@@ -4,12 +4,12 @@
   >
     <nav
       id="full-menu"
-      class="hidden w-full bg-barnRed text-oldLace font-titillium font-black text-3xl absolute bottom-14 py-4 border-b border-oldLace"
+      class="hidden w-full bg-barnRed text-oldLace font-titillium font-black text-2xl md:tex-3xl absolute bottom-14 py-4 border-b border-oldLace"
     >
-      <ul class="w-2/4 float-right">
+      <ul class="w-11/12 float-right">
         <li class="border-b-2 border-oldLace text-left mb-12" v-for="link in moreMenu" :key="link.id">
           <router-link :to="`${link.page}`" v-on:click="open"
-            ><span class="pr-4">{{ link.emoji }}</span> <span class="pl-4">{{ link.name }}</span></router-link
+            ><span class="pr-2">{{ link.emoji }}</span> <span class="pl-2">{{ link.name }}</span></router-link
           >
         </li>
       </ul>
