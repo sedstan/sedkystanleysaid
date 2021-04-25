@@ -1,6 +1,6 @@
 <template>
   <section id="achievements">
-    <h1>Achievements</h1>
+    <h2 class="text-2xl md:text-3xl lg:text-4xl">Achievements</h2>
   </section>
 </template>
 

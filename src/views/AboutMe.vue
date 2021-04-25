@@ -1,6 +1,6 @@
 <template>
   <section id="about-me">
-    <h1>About Me</h1>
+    <h2 class="text-2xl md:text-3xl lg:text-4xl">About Me</h2>
   </section>
 </template>
 
