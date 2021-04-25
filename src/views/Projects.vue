@@ -1,6 +1,6 @@
 <template>
-  <section id="projects">
-    <h1>Projects</h1>
+  <section id="projects" class="bg-copper">
+    <h2 class="font-titillium font-black text-oldLace text-2xl">Projects</h2>
   </section>
 </template>
 
