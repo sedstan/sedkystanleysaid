@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "eslint-plugin-graphql": "^4.0.0",
     "normalize.css": "^8.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
@@ -29,7 +30,9 @@
     "postcss": "^7",
     "prettier": "2.2.1",
     "prettier-eslint": "^12.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vue-cli-plugin-apollo": "~0.22.2",
+    "vue-loader": "^16.2.0"
   },
   "browserslist": [
     "> 1%",
