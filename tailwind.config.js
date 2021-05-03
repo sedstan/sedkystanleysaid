@@ -34,4 +34,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  purge: { content: ['./public/**/*.html', './src/**/*.vue'] }
 }
