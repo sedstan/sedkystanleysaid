@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       showHeader: true,
-      lastScrollPos: 0
+      lastScrollPos: 0,
     }
   },
   mounted() {
@@ -35,7 +35,8 @@ export default {
   },
   methods: {
     onScroll() {
-      const currScrollPos = window.pageYOffset || document.documentElement.scrollTop
+      const currScrollPos =
+        window.pageYOffset || document.documentElement.scrollTop
 
       if (currScrollPos < 0) {
         return
@@ -47,8 +48,8 @@ export default {
 
       this.showHeader = currScrollPos < this.lastScrollPos
       this.lastScrollPos = currScrollPos
-    }
-  }
+    },
+  },
 }
 </script>
 

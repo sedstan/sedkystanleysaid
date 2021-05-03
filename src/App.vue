@@ -34,8 +34,8 @@ export default {
     Achievements,
     BeSocial,
     Footer,
-    MobileNav
-  }
+    MobileNav,
+  },
 }
 </script>
 

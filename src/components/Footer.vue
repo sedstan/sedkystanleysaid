@@ -1,7 +1,11 @@
 <template>
-  <footer class="font-roboto font-black text-oldLace text-sm w-full h-17 bg-bistro flex items-center justify-center">
+  <footer
+    class="font-roboto font-black text-oldLace text-sm w-full h-17 bg-bistro flex items-center justify-center"
+  >
     <div class="lg:container">
-      <p class="p-3">&copy; Sedky Stanley Said {{ year }} - All Rights Reserved.</p>
+      <p class="p-3">
+        &copy; Sedky Stanley Said {{ year }} - All Rights Reserved.
+      </p>
     </div>
   </footer>
 </template>
@@ -14,10 +18,10 @@ export default {
   name: 'Footer',
   components: {},
 
-  data: function () {
+  data() {
     return {
-      year: year
+      year,
     }
-  }
+  },
 }
 </script>

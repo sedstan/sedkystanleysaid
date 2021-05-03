@@ -5,8 +5,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
-  }
+    component: Home,
+  },
 ]
 
 const router = createRouter({
@@ -16,10 +16,10 @@ const router = createRouter({
     if (to.hash) {
       return {
         selector: to.hash,
-        bahavior: 'smoother'
+        bahavior: 'smoother',
       }
     }
-  }
+  },
 })
 
 export default router

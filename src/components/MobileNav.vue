@@ -7,9 +7,14 @@
       class="hidden w-full bg-barnRed text-oldLace font-titillium font-black text-2xl md:tex-3xl absolute bottom-14 py-4 border-b border-oldLace"
     >
       <ul class="w-11/12 float-right">
-        <li class="border-b-2 border-oldLace text-left mb-12" v-for="link in moreMenu" :key="link.id">
+        <li
+          class="border-b-2 border-oldLace text-left mb-12"
+          v-for="link in moreMenu"
+          :key="link.id"
+        >
           <router-link :to="`${link.page}`" v-on:click="open"
-            ><span class="pr-2">{{ link.emoji }}</span> <span class="pl-2">{{ link.name }}</span></router-link
+            ><span class="pr-2">{{ link.emoji }}</span>
+            <span class="pl-2">{{ link.name }}</span></router-link
           >
         </li>
       </ul>
@@ -19,7 +24,9 @@
         <li class="w-full" v-for="link in navbarLinks" :key="link.id">
           <router-link class="flex-auto w-full" :to="`${link.page}`"
             ><span class="text-lg">{{ link.emoji }}</span
-            ><br /><span class="text-xs font-black">{{ link.name }}</span></router-link
+            ><br /><span class="text-xs font-black">{{
+              link.name
+            }}</span></router-link
           >
         </li>
       </ul>
@@ -44,7 +51,7 @@ export default {
 
       btn.classList.toggle('active')
       menu.classList.toggle('hidden')
-    }
+    },
   },
   data() {
     return {
@@ -55,7 +62,7 @@ export default {
           page: '/',
           emoji: '\ud83c\udfe0',
           navbar: true,
-          moreMenu: false
+          moreMenu: false,
         },
         {
           id: 1,
@@ -63,7 +70,7 @@ export default {
           name: 'Projects',
           page: '/#projects',
           navbar: true,
-          moreMenu: false
+          moreMenu: false,
         },
         {
           id: 2,
@@ -71,7 +78,7 @@ export default {
           name: 'About Me',
           page: '/#about-me',
           navbar: false,
-          moreMenu: true
+          moreMenu: true,
         },
         {
           id: 3,
@@ -79,7 +86,7 @@ export default {
           name: 'Achievements',
           page: '/#achievements',
           navbar: false,
-          moreMenu: true
+          moreMenu: true,
         },
         {
           id: 4,
@@ -87,22 +94,18 @@ export default {
           name: 'Be Social',
           page: '/#be-social',
           navbar: false,
-          moreMenu: true
-        }
-      ]
+          moreMenu: true,
+        },
+      ],
     }
   },
   computed: {
-    navbarLinks: function () {
-      return this.links.filter(function (l) {
-        return l.navbar
-      })
+    navbarLinks() {
+      return this.links.filter((l) => l.navbar)
     },
-    moreMenu: function () {
-      return this.links.filter(function (l) {
-        return l.moreMenu
-      })
-    }
-  }
+    moreMenu() {
+      return this.links.filter((l) => l.moreMenu)
+    },
+  },
 }
 </script>
