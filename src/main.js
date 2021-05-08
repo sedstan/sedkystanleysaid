@@ -25,46 +25,6 @@ const defaultClient = new ApolloClient({
     link: authLink.concat(httpLink)
 })
 
-const query = gql`
-query {
-  viewer {
-    avatarUrl
-    bio
-    company
-    email
-    login
-    repositories(last: 10) {
-      edges {
-        node {
-          id
-          name
-          description
-          url
-          languages(last: 10) {
-            edges {
-              node {
-                id
-                name
-                color
-              }
-            }
-          }
-          primaryLanguage {
-            id
-            name
-            color
-          }
-        }
-      }
-    }
-  }
-} 
-`
-defaultClient.query({
-    query
-})
-    .then(response => console.log(response))
-
 createApp(
     {
         setup() {

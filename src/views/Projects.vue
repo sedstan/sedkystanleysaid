@@ -5,13 +5,18 @@
     >
       Projects
     </h2>
+    <ProjectCards />
   </section>
 </template>
 
 <script>
+import ProjectCards from '@/components/ProjectCards.vue'
+
 export default {
   name: 'Projects',
-  components: {},
+  components: {
+    ProjectCards
+  },
 }
 </script>
 
