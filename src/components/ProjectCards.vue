@@ -1,9 +1,16 @@
 <template>
     <div v-for="repo in repos" :key="repo.node">
-        <article>
-            <h3>{{ repo.node.name }}</h3>
-            <p>{{ repo.node.description }}</p>
-        </article>
+        <a
+            href="{{repo.node.url}}"
+            hreflang="en"
+            referrerpolicy="no-referrer"
+            rel="external"
+            target="_blank"
+            ><article>
+                <h3>{{ repo.node.name }}</h3>
+                <p>{{ repo.node.description }}</p>
+            </article></a
+        >
     </div>
 </template>
 
