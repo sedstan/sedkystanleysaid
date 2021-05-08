@@ -1,17 +1,14 @@
 <template>
-    <div>
+    <div v-for="repo in repos" :key="repo.node">
         <article>
-            <header>
-                <h4></h4>
-            </header>
-            <body></body>
-            <footer></footer>
+            <h3>{{ repo.node.name }}</h3>
+            <p>{{ repo.node.description }}</p>
         </article>
     </div>
 </template>
 
 <script>
-import { useQuery } from '@vue/apollo-composable'
+import { useQuery, useResult } from '@vue/apollo-composable'
 import lastTenRepos from '../graphql/repos.query.graphql'
 
 export default {
@@ -19,8 +16,13 @@ export default {
 
     setup() {
         const { result } = useQuery(lastTenRepos)
+        const repos = useResult(
+            result,
+            null,
+            (data) => data.viewer.repositories.edges
+        )
 
-        return { result }
+        return { repos }
     },
 }
 </script>

@@ -1,4 +1,4 @@
-query repos {
+query lastTenRepos {
     viewer {
     repositories(last: 10) {
       edges {
