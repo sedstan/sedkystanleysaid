@@ -12,7 +12,6 @@
 export default {
   name: 'Projects',
   components: {
-    Project,
   },
 }
 </script>

@@ -8,8 +8,9 @@
     "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "@apollo/client": "^3.3.16",
     "core-js": "^3.6.5",
+    "graphql": "^15.5.0",
     "normalize.css": "^8.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
