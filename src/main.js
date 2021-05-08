@@ -1,5 +1,6 @@
-import { createApp } from 'vue'
+import { createApp, provide, h } from 'vue'
 import { ApolloClient, InMemoryCache, gql, createHttpLink } from '@apollo/client';
+import { DefaultApolloClient } from '@vue/apollo-composable'
 import { setContext } from '@apollo/client/link/context';
 import App from './App.vue'
 import router from './router'
@@ -25,18 +26,52 @@ const defaultClient = new ApolloClient({
 })
 
 const query = gql`
-    query {
-        viewer {
+query {
+  viewer {
+    avatarUrl
+    bio
+    company
+    email
+    login
+    repositories(last: 10) {
+      edges {
+        node {
+          id
+          name
+          description
+          url
+          languages(last: 10) {
+            edges {
+              node {
+                id
+                name
+                color
+              }
+            }
+          }
+          primaryLanguage {
+            id
             name
-            bio
-            avatarUrl
-            email
+            color
+          }
         }
+      }
     }
+  }
+} 
 `
 defaultClient.query({
     query
 })
     .then(response => console.log(response))
 
-createApp(App).use(router).use(router).mount('#app')
+createApp(
+    {
+        setup() {
+            provide(DefaultApolloClient, defaultClient)
+        },
+        render() {
+            return h(App)
+        }
+    }
+).use(router).use(router).mount('#app')

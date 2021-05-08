@@ -11,8 +11,7 @@
 <script>
 export default {
   name: 'Projects',
-  components: {
-  },
+  components: {},
 }
 </script>
 
