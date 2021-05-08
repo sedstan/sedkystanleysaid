@@ -1,9 +1,16 @@
 <template>
-{{result.value}}
+    <div>
+        <article>
+            <header>
+                <h4></h4>
+            </header>
+            <body></body>
+            <footer></footer>
+        </article>
+    </div>
 </template>
 
 <script>
-import { watch } from '@vue/composition-api'
 import { useQuery } from '@vue/apollo-composable'
 import lastTenRepos from '../graphql/repos.query.graphql'
 
@@ -12,10 +19,6 @@ export default {
 
     setup() {
         const { result } = useQuery(lastTenRepos)
-        
-        watch(() => {
-            console.log(result);
-        })
 
         return { result }
     },
