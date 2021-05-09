@@ -1,5 +1,5 @@
 <template>
-    <div v-for="repo in repos" :key="repo.node">
+    <div v-for="repo in repos" :key="repo.node" class="w-full relative flex flex-col items-stretch h-full">
         <app-link isExternal :to="`${repo.node.url}`">
             <article>
                 <h3>{{ repo.node.name }}</h3>

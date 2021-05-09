@@ -11,7 +11,7 @@
       <h1 class="font-black text-3xl md:text-6xl lg:text-7xl mb-3">
         {{ name }}
       </h1>
-      <h2 class="font-bold text-2xl md:text-4xl lg:text-6">{{ title }}</h2>
+      <h2 class="font-bold text-2xl md:text-4xl lg:text-6xl">{{ title }}</h2>
     </div>
   </div>
 </template>
