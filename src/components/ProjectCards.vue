@@ -1,26 +1,22 @@
 <template>
     <div v-for="repo in repos" :key="repo.node">
-        <a
-            href="{{repo.node.url}}"
-            hreflang="en"
-            referrerpolicy="no-referrer"
-            rel="external"
-            target="_blank"
-            ><article>
+        <app-link isExternal :to="`${repo.node.url}`">
+            <article>
                 <h3>{{ repo.node.name }}</h3>
                 <p>{{ repo.node.description }}</p>
-            </article></a
-        >
+            </article>
+        </app-link>
     </div>
 </template>
 
 <script>
 import { useQuery, useResult } from '@vue/apollo-composable'
 import lastTenRepos from '../graphql/repos.query.graphql'
+import AppLink from './AppLink.vue'
 
 export default {
     name: 'ProjectCards',
-
+    components: { AppLink },
     setup() {
         const { result } = useQuery(lastTenRepos)
         const repos = useResult(
