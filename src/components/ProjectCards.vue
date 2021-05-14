@@ -1,9 +1,36 @@
 <template>
-    <div v-for="repo in repos" :key="repo.node" class="w-full relative flex flex-col items-stretch h-full">
+    <div v-for="repo in repos" :key="repo.node" class="">
         <app-link isExternal :to="`${repo.node.url}`">
-            <article>
-                <h3>{{ repo.node.name }}</h3>
-                <p>{{ repo.node.description }}</p>
+            <article class="relative flex flex-col justify-center items-center flex-wrap">
+                <header>
+                    <h3>{{ repo.node.name }}</h3>
+                </header>
+                <main>
+                    <p>{{ repo.node.description }}</p>
+                    <div>
+                        <h4>Languages:</h4>
+                        <p
+                            v-for="language in repo.node.languages.edges"
+                            :key="language.node"
+                        >
+                            <span
+                                :style="{ color: `${language.node.color}` }"
+                                >{{ language.node.name }}</span
+                            >
+                        </p>
+                    </div>
+                    <div class="hidden">
+                        <h4>Primary Language:</h4>
+                        <p>
+                            <span
+                                :style="{
+                                    color: `${repo.node.primaryLanguage.color}`,
+                                }"
+                                >{{ repo.node.primaryLanguage.name }}</span
+                            >
+                        </p>
+                    </div>
+                </main>
             </article>
         </app-link>
     </div>

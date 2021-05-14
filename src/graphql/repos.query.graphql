@@ -1,23 +1,20 @@
 query lastTenRepos {
     viewer {
-    repositories(last: 10) {
+    repositories(last: 10, orderBy: {field: CREATED_AT, direction: DESC}) {
       edges {
         node {
-          id
           name
           description
           url
-          languages(last: 10) {
+          languages(last: 10, orderBy: {field: SIZE, direction: DESC}) {
             edges {
               node {
-                id
                 name
                 color
               }
             }
           }
           primaryLanguage {
-            id
             name
             color
           }
