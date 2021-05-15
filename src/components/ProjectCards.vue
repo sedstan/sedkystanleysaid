@@ -1,10 +1,10 @@
 <template>
-    <div v-for="repo in repos" :key="repo.node" class="">
+    <div v-for="repo in repos" :key="repo.node" class="mr-1">
         <app-link isExternal :to="`${repo.node.url}`">
             <article
-                class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded border-barnRed mx-1 min-w-full w-80 h-auto"
+                class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 min-w-full w-80 min-h-full h-80 text-left"
             >
-                <header>
+                <header class="mb-4 border-b border-barnRed w-full">
                     <h3
                         class="text-3xl md:2xl sm:xl font-titillium text-barnRed"
                     >
@@ -12,17 +12,17 @@
                     </h3>
                 </header>
                 <main class="relative flex flex-col justify-start items-start flex-wrap">
-                    <p class="font-roboto">{{ repo.node.description }}</p>
+                    <p class="font-roboto text-bistro mb-4">{{ repo.node.description }}</p>
                     <div>
                         <h4
-                            class="text-2xl md:text-xl sm:text-lg font-titillium"
+                            class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
                         >
                             Languages:
                         </h4>
                         <p
                             v-for="language in repo.node.languages.edges"
                             :key="language.node"
-                            class="font-roboto flex flex-col justify-start items-start"
+                            class="font-roboto flex flex-col justify-start items-start text-bistro"
                         >
                             <span
                                 :style="{ color: `${language.node.color}` }"
@@ -32,11 +32,11 @@
                     </div>
                     <div class="flex flex-col justify-start items-start">
                         <h4
-                            class="text-2xl md:text-xl sm:text-lg font-titillium"
+                            class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
                         >
                             Primary Language:
                         </h4>
-                        <p class="font-roboto">
+                        <p class="font-robot text-bistro">
                             <span
                                 :style="{
                                     color: `${repo.node.primaryLanguage.color}`,
