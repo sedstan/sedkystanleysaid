@@ -1,25 +1,31 @@
 query lastTenRepos {
     viewer {
-    repositories(last: 10, orderBy: {field: UPDATED_AT, direction: DESC}) {
-      edges {
-        node {
-          name
-          description
-          url
-          languages(last: 10, orderBy: {field: SIZE, direction: ASC}) {
+        repositories(
+            last: 10
+            orderBy: { field: STARGAZERS, direction: DESC }
+        ) {
             edges {
-              node {
-                name
-                color
-              }
+                node {
+                    name
+                    description
+                    url
+                    languages(
+                        last: 10
+                        orderBy: { field: SIZE, direction: ASC }
+                    ) {
+                        edges {
+                            node {
+                                name
+                                color
+                            }
+                        }
+                    }
+                    primaryLanguage {
+                        name
+                        color
+                    }
+                }
             }
-          }
-          primaryLanguage {
-            name
-            color
-          }
         }
-      }
     }
-  }
 }
