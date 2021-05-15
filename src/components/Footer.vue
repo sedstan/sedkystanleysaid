@@ -4,7 +4,7 @@
   >
     <div class="lg:container">
       <p class="p-3">
-        &copy; Sedky Stanley Said {{ year }} - All Rights Reserved.
+        &copy; 2016 - {{ year }} Sedky Stanley Said
       </p>
     </div>
   </footer>

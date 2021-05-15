@@ -6,7 +6,7 @@
             >
                 Projects
             </h2>
-            <div class="flex flex-row flex-1 overflow-x-scroll overflow-y-auto pb-10 w-full">
+            <div class="flex flex-row flex-1 overflow-scroll p-0">
                 <ProjectCards />
             </div>
         </div>

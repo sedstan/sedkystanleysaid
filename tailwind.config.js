@@ -20,15 +20,19 @@ module.exports = {
       backgroundOpacity: {
         '09': '0.9',
       },
+      maxWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+      },
+      width: {
+        '75': '18.75em',
+        '100': '25em'
+      },
     },
     future: {
       removeDeprecatedGapUtilities: true,
-    },
-    maxWidth: {
-      '1/4': '25%',
-      '1/2': '50%',
-      '3/4': '75%',
-    },
+    }
   },
   variants: {
     extend: {},
