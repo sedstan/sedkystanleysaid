@@ -1,8 +1,8 @@
 <template>
-    <div v-for="repo in repos" :key="repo.node" class="relative mr-1 pt-5 pb-5">
+    <div v-for="repo in repos" :key="repo.node" class="relative mr-1 pt-5 pb-5 md:w-min">
         <app-link isExternal :to="`${repo.node.url}`">
             <article
-                class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 text-left min-w-full w-100 min-h-full h-100"
+                class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 text-left min-w-full w-100 min-h-full h-100 md:min-w-0"
             >
                 <header class="mb-4 border-b border-barnRed w-full">
                     <h3
@@ -30,7 +30,7 @@
                             >
                         </p>
                     </div>
-                    <div class="flex flex-col justify-start items-start">
+                    <div class="flex flex-col justify-start items-start ">
                         <h4
                             class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
                         >
