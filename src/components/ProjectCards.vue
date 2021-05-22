@@ -1,5 +1,5 @@
 <template>
-    <div v-for="repo in repos" :key="repo.node" class="relative mr-1 pt-5 pb-5 md:w-min">
+    <div v-for="repo in repos" :key="repo.node" class="relative mr-1 pt-5 pb-5 h-full group">
         <app-link isExternal :to="`${repo.node.url}`">
             <article
                 class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 text-left min-w-full w-100 min-h-full h-100 md:min-w-0"
@@ -11,9 +11,9 @@
                         {{ repo.node.name }}
                     </h3>
                 </header>
-                <main class="flex flex-col justify-start items-start align-left">
+                <main class="relative">
                     <p class="font-roboto text-bistro mb-4">{{ repo.node.description }}</p>
-                    <div>
+                    <div class="flex flex-col justify-start items-start align-left group-hover:hidden">
                         <h4
                             class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
                         >
@@ -30,7 +30,7 @@
                             >
                         </p>
                     </div>
-                    <div class="flex flex-col justify-start items-start ">
+                    <div class="hidden group-hover:flex flex-col absolute w-full">
                         <h4
                             class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
                         >
