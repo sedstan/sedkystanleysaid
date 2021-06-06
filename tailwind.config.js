@@ -35,8 +35,8 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {
+          display: ['group-hover']
+        },
     },
-    plugins: [],
-    purge: { content: ['./public/**/*.html', './src/**/*.vue'] },
 }
