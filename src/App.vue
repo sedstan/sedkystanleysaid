@@ -1,18 +1,18 @@
 <template>
-  <!-- Header -->
-  <Header />
-  <!-- Main -->
-  <main>
-    <Home />
-    <Projects />
-    <AboutMe />
-    <Achievements />
-    <BeSocial />
-  </main>
-  <!-- Footer -->
-  <Footer />
-  <!-- Bottom Navigation -->
-  <MobileNav />
+    <!-- Header -->
+    <Header />
+    <!-- Main -->
+    <main>
+        <Home />
+        <Projects />
+        <AboutMe />
+        <Achievements />
+        <BeSocial />
+    </main>
+    <!-- Footer -->
+    <Footer />
+    <!-- Bottom Navigation -->
+    <MobileNav />
 </template>
 
 <script>
@@ -26,25 +26,25 @@ import Footer from '@/components/Footer.vue'
 import MobileNav from '@/components/MobileNav.vue'
 
 export default {
-  components: {
-    Header,
-    Home,
-    Projects,
-    AboutMe,
-    Achievements,
-    BeSocial,
-    Footer,
-    MobileNav,
-  },
+    components: {
+        Header,
+        Home,
+        Projects,
+        AboutMe,
+        Achievements,
+        BeSocial,
+        Footer,
+        MobileNav,
+    },
 }
 </script>
 
 <style>
 #app {
-  font-family: Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    font-family: Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
 }
 </style>
