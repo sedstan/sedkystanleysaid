@@ -6,7 +6,9 @@
             >
                 Projects
             </h2>
-            <div class="flex flex-col lg:flex-row items-start flex-1 lg:overflow-x-scroll overflow-y-hidden p-0">
+            <div
+                class="flex flex-col items-center md:items-center lg:items-start lg:flex-row flex-1 lg:overflow-x-scroll overflow-y-hidden p-0"
+            >
                 <ProjectCards />
             </div>
         </div>
