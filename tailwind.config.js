@@ -29,6 +29,10 @@ module.exports = {
                 75: '18.75em',
                 100: '25em',
             },
+            height: {
+                75: '18.75em',
+                100: '25em',
+            },
         },
         future: {
             removeDeprecatedGapUtilities: true,
@@ -36,7 +40,7 @@ module.exports = {
     },
     variants: {
         extend: {
-          display: ['group-hover']
+            display: ['group-hover'],
         },
     },
 }
