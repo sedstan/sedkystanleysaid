@@ -5,6 +5,7 @@
         class="relative mr-1 pt-5 pb-5 md:w-min"
     >
         <app-link isExternal :to="`${repo.node.url}`">
+            <!--          TODO: Extend height on card, may need to setup extend on tailwind config.-->
             <article
                 class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 text-left min-w-full w-100 min-h-full h-100 md:min-w-0 group"
             >
@@ -16,7 +17,7 @@
                     </h3>
                 </header>
                 <main
-                    class="flex flex-col justify-start items-start align-left"
+                    class="flex flex-col justify-start items-start align-left w-full"
                 >
                     <p class="font-roboto text-bistro mb-4">
                         {{ repo.node.description }}
@@ -39,7 +40,8 @@
                         </p>
                     </div>
                     <div
-                        class="hidden group-hover:flex flex-col justify-start items-start">
+                        class="hidden group-hover:flex flex-col justify-start items-start"
+                    >
                         <h4
                             class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
                         >
@@ -54,6 +56,13 @@
                             >
                         </p>
                     </div>
+                    <!--                  TODO: Decide on bgImg or Img to use here on card-->
+                    <img src="`{{repo.node.openGraphImageUrl}}`" />
+                    <!--                    <div class="w-full p-8"-->
+                    <!--                        v-bind:style="{-->
+                    <!--                            backgroundImage: `url(${repo.node.openGraphImageUrl})`,-->
+                    <!--                        }"-->
+                    <!--                    ></div>-->
                 </main>
             </article>
         </app-link>
@@ -75,6 +84,7 @@ export default {
             null,
             (data) => data.viewer.repositories.edges
         )
+        console.log(result)
 
         return { repos }
     },
