@@ -5,7 +5,6 @@
         class="relative mr-1 pt-5 pb-5 md:w-min"
     >
         <app-link isExternal :to="`${repo.node.url}`">
-            <!--          TODO: Extend height on card, may need to setup extend on tailwind config.-->
             <article
                 class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 text-left min-w-full w-100 min-h-full h-720 md:min-w-0 group"
             >
@@ -22,7 +21,7 @@
                     <p class="font-roboto text-bistro mb-4">
                         {{ repo.node.description }}
                     </p>
-                    <div class="group-hover:hidden">
+                    <div class="group-hover:hidden mb-3">
                         <h4
                             class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
                         >
@@ -40,7 +39,7 @@
                         </p>
                     </div>
                     <div
-                        class="hidden group-hover:flex flex-col justify-start items-start"
+                        class="hidden group-hover:flex flex-col justify-start items-start mb-3"
                     >
                         <h4
                             class="text-2xl md:text-xl sm:text-lg font-titillium text-barnRed"
