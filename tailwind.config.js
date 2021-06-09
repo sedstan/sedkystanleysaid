@@ -32,6 +32,7 @@ module.exports = {
             height: {
                 75: '18.75em',
                 100: '25em',
+                720: '45em',
             },
         },
         future: {

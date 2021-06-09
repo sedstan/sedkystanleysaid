@@ -7,7 +7,7 @@
         <app-link isExternal :to="`${repo.node.url}`">
             <!--          TODO: Extend height on card, may need to setup extend on tailwind config.-->
             <article
-                class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 text-left min-w-full w-100 min-h-full h-100 md:min-w-0 group"
+                class="relative flex flex-col flex-auto justify-start items-start flex-wrap bg-cultured p-5 border border-solid rounded mx-1 text-left min-w-full w-100 min-h-full h-720 md:min-w-0 group"
             >
                 <header class="mb-4 border-b border-barnRed w-full">
                     <h3
@@ -56,13 +56,7 @@
                             >
                         </p>
                     </div>
-                    <!--                  TODO: Decide on bgImg or Img to use here on card-->
-                    <img src="`{{repo.node.openGraphImageUrl}}`" />
-                    <!--                    <div class="w-full p-8"-->
-                    <!--                        v-bind:style="{-->
-                    <!--                            backgroundImage: `url(${repo.node.openGraphImageUrl})`,-->
-                    <!--                        }"-->
-                    <!--                    ></div>-->
+                    <img v-bind:src="`${repo.node.openGraphImageUrl}`" />
                 </main>
             </article>
         </app-link>
