@@ -1,4 +1,4 @@
-query user {
+ query user {
     viewer {
         avatarUrl
         bio

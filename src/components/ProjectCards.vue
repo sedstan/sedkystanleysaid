@@ -55,7 +55,13 @@
                             >
                         </p>
                     </div>
-                    <img v-bind:src="`${repo.node.openGraphImageUrl}`" />
+                    <div class="relative w-full">
+                        <img
+                            class="absolute bottom-0 top-0 mx-auto"
+                            v-bind:src="`${repo.node.openGraphImageUrl}`"
+                            alt=""
+                        />
+                    </div>
                 </main>
             </article>
         </app-link>
@@ -63,6 +69,13 @@
 </template>
 
 <script>
+/**
+ * @property  {Object} viewer
+ * @property {Object }repositories
+ * @typedef {Object} repo.node
+ * @property {Object} primaryLanguage
+ * @property {String} openGraphImageUrl
+ */
 import { useQuery, useResult } from '@vue/apollo-composable'
 import lastTenRepos from '../graphql/repos.query.graphql'
 import AppLink from './AppLink.vue'
@@ -77,8 +90,8 @@ export default {
             null,
             (data) => data.viewer.repositories.edges
         )
-        console.log(result)
 
+        // console.log(repos);
         return { repos }
     },
 }

@@ -2,7 +2,6 @@ import { createApp, provide, h } from 'vue'
 import {
     ApolloClient,
     InMemoryCache,
-    gql,
     createHttpLink,
 } from '@apollo/client'
 import { DefaultApolloClient } from '@vue/apollo-composable'
