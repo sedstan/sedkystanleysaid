@@ -7,7 +7,6 @@
         <Projects />
         <AboutMe />
         <Achievements />
-        <BeSocial />
     </main>
     <!-- Footer -->
     <Footer />
@@ -21,7 +20,6 @@ import Home from '@/views/Home.vue'
 import Projects from '@/views/Projects.vue'
 import AboutMe from '@/views/AboutMe.vue'
 import Achievements from '@/views/Achievements.vue'
-import BeSocial from '@/views/BeSocial.vue'
 import Footer from '@/components/Footer.vue'
 import MobileNav from '@/components/MobileNav.vue'
 
@@ -32,7 +30,6 @@ export default {
         Projects,
         AboutMe,
         Achievements,
-        BeSocial,
         Footer,
         MobileNav,
     },
